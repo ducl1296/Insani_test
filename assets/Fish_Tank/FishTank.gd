@@ -16,5 +16,6 @@ func _physics_process(delta): #Update
 		Global.current_food += 1
 		get_tree().call_group("fishtank","add_child",food)
 		
+		
 	print(Global.current_food)
-
+	$UI/money.text = "Money: " + str(Global.money)
