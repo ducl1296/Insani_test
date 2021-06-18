@@ -1,3 +1,25 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
 
-[node name="FishTank" type="Node2D"]
+[ext_resource path="res://assets/Fish_Tank/FishTank.gd" type="Script" id=1]
+[ext_resource path="res://assets/Fish_Tank/background.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/Food/Food.tscn" type="PackedScene" id=3]
+
+[node name="FishTank" type="Node2D" groups=[
+"fishtank",
+]]
+script = ExtResource( 1 )
+Food = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -100.794, -35.2778 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
